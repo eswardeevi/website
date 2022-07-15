@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION</title>
+    <script src="formValidations.js">
+
+    </script>
+    <style>
+        body{
+            background-color: rgb(8, 131, 110);
+        }
+        div{
+            background-color: aqua;
+            float:center;
+            width: 40%;
+            
+        }
+        label{
+            font-style:italic;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1 style="color: black;"><i>REGISTRATION FORM</i></h1>
+        <div id="d">
+            <form action="/jk.php" method="post" onsubmit="return validate();">
+                <table >
+                    <tr>
+                        <td><label for="fname">First Name:</label></td>
+                        <td><input type="text" name="" id="fname" required></td>
+                        <td><label id="i1" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mname">Middle Name:</label></td>
+                        <td><input type="text" name=""  id="mname"></td>
+                        <td><label id="i2" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname">Last Name:</label></td>
+                        <td><input type="text" name="" id="lname" required></td>
+                        <td><label id="i3" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Fname">Full Name</label></td>
+                        <td><input type="text" name="" id="Fname" readonly onclick="fullName();"></td>
+                        <td><label id="i4" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="country">Choose Country:</label></td>
+                        <td><select name="" id="country">
+                            <option value="INDIA" id="ind">INDIA</option>
+                            <option value="USA" id="usa">USA</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phNO">Phone Number:</label></td>
+                        <td><input type="text" name="" id="phNo" required></td>
+                        <td><label id="i5" style="color:red ;visibility: hidden;"><b>*invalid phone number</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="psw">Password:</label></td>
+                        <td><input type="password" name="" id="psw">
+                            <img src="eye1.png" width="20px" height="20px" id="img" onclick="show()">
+                        </td>      
+                        <td><label id="i6" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="hobbies">select any two hobbies:</label></td>
+                            <td><input type="checkbox" name="" id="hobbies"><label for="hobby1">Drawing</label></td>
+                    </tr>
+                    <tr>
+                        <td  rowspan="4">
+                             
+                        </td>
+                        <td>
+                            <input type="checkbox" name="" id="hobbies"><label for="hobby2">Sports</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="" id="hobbies"><label for="hobby3">Singing</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="" id="hobbies"><label for="hobby4">Reading</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="" id="hobbies"><label for="hobby5">Video Games</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="image">Insert an Image:</label></td>
+                        <td><input type="file" name="" id="image" accept="image/jpg/png"></td>
+                        <td><label id="i7" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">E-Mail Address:</label></td>
+                        <td><input type="email" name="" id="email" required></td>
+                        <td><label id="i8" style="color:red ;visibility: hidden;"><b>*enter valid email address</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">date Of Birth:</label></td>
+                        <td><input type="date" name="" id="dob"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Addresss:</label></td>
+                        <td><textarea rows="3" cols="" name="" id="address"></textarea></td>
+                        <td><label id="i9" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id="agree"><label for="agree">I agrre to the terms of the company</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="reset" value="RESET"></td>
+                        <td><input type="submit" value="SUBMIT"></td>
+                    </tr>
+                </table>
+            </form>
+        
+        </div>
+    </center>
+    <script type="text/javascript">
+        function validate()
+        {
+            var fn=document.getElementById("fname").value;
+            var patn=/^[a-z|A-Z]*$/;
+            if(fn.length<4)
+            {
+                document.getElementById("fname").style.border="4px Solid red";
+                document.getElementById("i1").style.visibility="visible";
+                return false;
+            }
+            if(!patn.test(fn)){
+                document.getElementById("fname").style.border="4px Solid red";
+                document.getElementById("i1").style.visibility="visible";
+                return false;
+            }
+            // var mn=document.getElementById("mname").value;
+            // if(mn.length>=0){
+            //     return true;
+            // }
+            var ln=document.getElementById("lname").value;
+            if(ln.length<4)
+            {
+                document.getElementById("lname").style.border="4px Solid red";
+                document.getElementById("i3").style.visibility="visible";
+                return false;
+            }
+            var mail=document.getElementById("email").value;
+            var patem=/^[a-z|A-Z|0-9]*\.?([a-z|A-Z|0-9]*)@[a-z]{2,7}(\.[a-z]{2})?\.[a-z]{2,3}$/;
+            if(!patem.test(mail))
+            {
+                document.getElementById("email").style.border="4px Solid red";
+                document.getElementById("i8").style.visibility="visible";
+                return false;
+            }
+            
+            var c=document.getElementById("country").value;
+            var PH=document.getElementById("phNo").value;
+            var patph1=/^[0-9]{10}$/;
+            var patph2=/^[0-9]{3}\-[0-9]{3}\-[0-9]{4}$/;
+            if(c==document.getElementById("ind").value)
+            {
+                if(!patph1.test(PH))
+                {
+                    document.getElementById("phNo").style.border="4px Solid red";
+                    document.getElementById("i5").style.visibility="visible";
+                    return false;
+                }
+            }
+            if(c==document.getElementById("usa").value)
+            {
+                if(!patph2.test(PH))
+                {
+                    document.getElementById("phNo").style.border="4px Solid red";
+                    document.getElementById("i5").style.visibility="visible";
+                    return false;   
+                }
+            }
+        } 
+        function fullName()
+        {
+            var f=document.getElementById("fname").value;
+            var l=document.getElementById("lname").value;
+            document.getElementById("Fname").value=f+l;
+        }
+        function show()
+        {
+            if(document.getElementById("psw").type=="password")
+            {
+                document.getElementById("psw").type="text";
+                document.getElementById("img").src="eye2.png";
+            }
+            else
+            {
+                document.getElementById("psw").type="password";
+                document.getElementById("img").src="eye1.png";
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+  body{
+            background-image: linear-gradient(45deg,#3ffe78,#3d6778,#d7c890,#80d6a3);
+	font-family:Cursive;
+        }
+        div{
+            background-image: linear-gradient(45deg,#3ffe78,#3d6778,#d7c890,#80d6a3);
+	
+
+            float:center;
+            width: 40%;
+            
+        }
+.set{border-radius:8px;
+ background-image: linear-gradient(45deg,#3ffe78,#3d6778,#d7c890,#80d6a3);
+
+height:40px;
+width:90px;
+float:center;
+
+}
+#submit:hover{
+       
+ background-image: linear-gradient(45deg,#3fab58,#3ded78,#ffffff,#80ed33);
+ border:5px solid white;
+
+}
+#reset:hover{
+       
+ background-image: linear-gradient(45deg,#fe1111,#fe2311,#fe8990,#ff1122);
+ border:5px solid white;
+
+}

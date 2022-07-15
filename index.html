@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DEEVI GAYATHRI">
+    <meta name="description" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>PROJECT</title>
+    <link rel="icon" href="logo.png">
+    <style>
+        body {
+  background-image: linear-gradient(135deg,#2e3635,#2e3634,#3f4f4d,#0a2045,#56146e,#3bad9f,#588781,#49998f,#0a2045,#56146e,#3bad9f,#15d6bf);
+     background-size: cover;
+}
+
+         
+        }
+        #verticalNav a{
+            text-decoration: none;
+            color:black;
+        }
+        #table1{
+            background-image:linear-gradient(135deg,#2e3635,#2e36ab,#0a2045,#56146e,#3bad9f);           position: static;
+            top:0px;
+        }
+        td{
+            text-align: center;
+             color: white;
+            /* border: 2px solid red; */
+        }
+        footer{
+            background-color: black;
+            color: white;
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+        }
+        nav{
+            height: 50px;
+            width: 100%;
+             color: white;
+            background-image:  linear-gradient(45deg ,#ab34ff,#00000f,#0000fd,#123f12);;
+            text-align: center;
+            position:sticky;
+            top:0px;
+        }
+        #navdiv a{
+            color: white;
+            text-decoration: none;
+            padding: 13px 140px;
+        }
+        #navdiv a:hover{
+            background-color: white;
+            color:black;
+            font-style: oblique;
+            font-size: large
+        }
+        #navdiv td:hover{
+            background-color: white;
+        }
+        #table3 td{
+            width:25%;
+        }
+        #navdiv td ul{
+            position:absolute;
+            right: 330px;
+            display:none;
+            width:25.5%;
+            text-align: center;
+        }
+        #navdiv td:hover ul{
+            display:block;
+        }
+        #navdiv td:hover li ul{
+            display: none;
+        }
+        #navdiv td ul li{
+            display:block;
+            float:none;
+            height:auto;
+            line-height: 35px;
+            background-image:linear-gradient(135deg, #0a2045,#56146e,#3bad2a);
+        }
+        #navdiv td ul li:hover ul{
+            display:inline;
+            right: 345px;
+        }
+        #navdiv li:hover{
+            background-image:linear-gradient(135deg, #aec045,#56146e,#3bad2a);
+        }
+        #navdiv td ul li ul{
+            position:absolute;
+            display:none;
+            width:inherit;
+            text-align: center;
+        }
+        #navdiv td li li{
+            display: block;
+            float:none;
+            height:auto;
+            line-height: 35px;
+            background-image:linear-gradient(135deg, #aec045,#56146e,#3bad2a);
+        }
+        #verticalNav{
+            display: none;
+            position:absolute;
+            top: 75px;
+            right:155px;
+        } 
+        #verticaNav ul{
+            display:none;
+            position: absolute;
+            width:inherit;
+            text-align: center;
+            z-index: -1;
+        }
+        #verticalNav li{
+            display: block;
+            float:none;
+            height: auto;
+            color: white;
+            line-height: 35px;
+  background-image: linear-gradient(45deg ,#ab34ff,#00000f,#0000fd,#123f12);
+        }
+        #verticalNav li:hover{ 
+          background-image: linear-gradient(45deg ,#ab34ff,#00000f,#0000fd,#123f12);
+          color: white;
+        }
+        #verticalNav ul ul{
+            display:none;
+        }
+        #verticalNav ul li:hover ul{
+            display:inline;
+            position:absolute;
+            right:84px;
+             color: white;
+        }
+        #verticalNav ul li:hover ul ul{
+            display:none;
+             color: white;
+        }
+        #verticalNav ul ul li:hover ul{
+            display:inline;
+            position:absolute;
+            right:47px;
+             color: white;
+        }
+        #filter,#notifications{
+            width:25%;
+           
+  background-image: linear-gradient(135deg,#2e3635,#2e3634,#3f4f4d,#0a2045,#56146e,#3bad9f,#588781,#49998f,#0a2045,#56146e,#3bad9f,#15d6bf);
+    
+            float: left;
+            height:800px;
+        }
+        #main{
+            width:50%;
+            float:left;
+        }
+        iframe{
+            width:100%;
+            height: 800px;
+        }
+        #upArrow{
+            position: fixed;
+            right: 10px;
+        }
+        input{
+            background-color: rgb(41, 41, 95);
+            margin-top: 10px;
+            color: white;
+        }
+        button{
+            background-color: green;
+        }
+        button:hover{
+            background-color: red;
+        }
+        #list li{
+            margin-bottom: 10px;
+            color: white;
+        }
+        #notifications h3{
+            color:darkred;
+            text-align: center;
+        }
+        h1{
+            color: white;
+            text-shadow: 3px 3px 2px grey;
+            background-image: linear-gradient(45deg ,#ab34ff,#00000f,#0000fd,#123f12);
+        }
+        #myname{
+            background-image: linear-gradient(45deg ,#ab34ff,#00000f,#0000fd,#123f12);
+            position: fixed;
+            top:10px;
+            left: 170px;
+            height:80px;
+            width: 150px;
+            display: none;
+            color: white;
+        }
+        @media only screen and (max-width:600px)
+        {}
+
+    </style>
+</head>
+<body id="body">
+    <header>
+        <table id="table1" height="75px" width="100%">
+            <tr>
+                <td width="30%"><img src="logo.png" height="75px" width="75px" onmouseover="displayName()" onmouseout="hideName()" ></td>
+                <td><h1>GAYATHRI DEEVI</h1></td> 
+                <td width="30%"><a href="#" onclick="displayVNav()"><img src="menu1.png" height="35px" width="35px"></a></td>
+            </tr>
+        </table>
+    </header>
+    <div id="myname">
+        <h2>GAYATHRI</h2>
+    </div>
+    <footer>
+        <div id="footerdiv">
+            <table id="table2" width="100%">
+                <tr>
+                    <td width="30%"><small>@gaythri deevi</small></td>
+                    <td>****************************</td>
+                    <td width="30%">view count:
+                        <!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=8014534&style=0036&nbdigits=5&type=page&initCount=07" title="Free Counter" Alt="web counter"   border="0" /></a>   <a href="#table1" target="" ><img src="upArrow.jpg" width="30px" height="30px" id="upArrow"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+    <nav id="nav">
+        <div id="navdiv">
+            <table id="table3" width="100%" height="50px" style="text-align: center;">
+                <tr>
+                    <td><a href="ASSIGNMENT.html" target="">HOME</a></td>
+                    <td><a href="pra.html" target="frame">EXAM</a></td>
+                    <td><a href="#">BRANCH</a>
+                    <ul type="none">
+                        <li id="cse">CSE
+                            <ul type="none">
+                                <li>FACULTY</li>
+                                <li>STUDENT</li>
+                            </ul>
+                        </li>
+                        <li>ECE</li>
+                        <li>MECH</li>
+                    </ul>
+                    </td>
+                    <td><a href="contacts.html" target="frame">CONTACTS</a></td>
+                </tr>
+            </table>         
+        </div>
+    </nav>
+    <div id="verticalNav">
+        <ul>
+            <li><a href="ASSIGNMENT.html" target="">HOME</a></li>
+            <li><a href="formValidations.html" target="frame">EXAM</a></li>
+            <li>BRANCH
+                <ul type="none">
+                    <li>CSE
+                        <ul type="none">
+                            <li>FACULTY</li>
+                            <li>STUDENT</li>
+                        </ul>
+                    </li>
+                    <li>ECE</li>
+                    <li>MECH</li>
+                </ul>
+            </li>
+            <li><a href="contacts.html" target="frame">CONTACTS</a></li>
+        </ul>
+    </div>
+    <div id="home">
+        <div id="filter" align="center">
+            <div>
+                <form id="form">
+                    <label style="color: white;">Search:</label><input type="text" name="" id="search">
+                    <!-- <input type="submit" value="ADD"> -->
+                </form>
+            </div>
+            <ul type="none" id="list" align="left">
+                <li>VIjayawada</li>
+                <li>Hyderabad</li>
+                <li>Banglore</li>
+                <li>Kolkata</li>
+                <li>Indore</li>
+                <li>Mumbai</li>
+                <li>Pune</li>
+                <li>Luknow</li>
+                <li>Vizag</li>
+                <li>Chennai</li>
+                <li>Delhi</li>
+            </ul>
+        </div>
+        <div id="main"><iframe name="frame" src="slideshow.html">
+            
+        </iframe></div>
+        <div id="notifications">
+            <h2 align="center" style="background-color: rgb(0, 183, 255);"><marquee>NOTIFICATIONS</marquee></h2>
+            <h3>Notification 1</h3>
+            <h3>Notification 2</h3>
+            <h3>Notification 3</h3>
+            <h3>Notification 4</h3>
+            <h3>Notification 5</h3>
+            <h3>Notification 6</h3>
+            <h3>Notification 7</h3>
+            <h3>Notification 8</h3>
+            <h3>Notification 9</h3>
+        </div>
+    </div>
+    <script>
+        function displayVNav(){
+            if(document.getElementById("verticalNav").style.display=="none")
+            {
+                document.getElementById("verticalNav").style.display="block";
+                document.getElementById("nav").style.display="none";
+            }
+            else{
+                document.getElementById("verticalNav").style.display="none";
+                document.getElementById("nav").style.display="block";
+            }
+        }
+        
+        var filter=document.getElementById("search");
+        filter.addEventListener('keyup',searchItem,false);
+        function searchItem(e)
+        {
+            var text=e.target.value.toLowerCase();
+            var items=document.getElementsByTagName("li");
+            Array.from(items).forEach((item)=>
+            {
+                itemValue=item.firstChild.textContent;
+                if(itemValue.toLowerCase().indexOf(text)!=-1){
+                    item.style.display="block"; 
+                }
+                else{
+                    item.style.display="none";
+                }
+            } )
+        }
+        function displayName()
+        {
+            document.getElementById("myname").style.display="block";
+        }
+        function hideName()
+        {
+            document.getElementById("myname").style.display="none";
+        }
+    </script>
+</body>
+</html>

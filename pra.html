@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>form</title>
+<link rel="stylesheet" href="frm.css">
+ <script src="frm.js"></script>
+ </head>
+ <body bgcolor="#334e5e">
+  <h1 align="center">REGISTRATION FORM</h1>
+  <center><div id="d">
+ 
+  <form  action="/jk.php" method="post" onsubmit="return validate();">
+	<table><tr><td><label for="fn">First name:</label></td><td><input type="text" id="fn" required  ></td>
+    <td><label id="i1" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td></tr>
+	<tr><td><label for="ln">last name:</label></td><td><input type="text" id="ln" required></td><td><label id="i2" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td></tr>
+	<tr><td><label for="mn">Middle name:<label></td><td><input type="text" id="mn" ></td><td><label id="i3" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td></tr>
+<tr><td><label for="Fn">Full name:<label></td><td><input type="text" id="Fn" readonly   onclick="fullName();"></td><td><label id="i4" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td></tr>
+<tr>
+                        <td><label for="country">Choose Country:</label></td>
+                        <td><select name="" id="country" required>
+                            <option value="INDIA" id="ind">INDIA</option>
+                            <option value="USA" id="usa">USA</option>
+                        </select></td>
+                    </tr>
+
+
+
+<tr><td><label for="phn">Phone Number:</label></td><td><input type="tel" id="phn" required></td><td><label id="i5" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td></tr>
+
+	<tr><td><label for="psw">Password:</label></td><td><input type="password" id="psw" required ><img src="https://th.bing.com/th/id/OIP.V3pwYP1jK0L2sL54ZZax-QAAAA?w=150&h=150&c=7&r=0&o=5&pid=1.7" height="20px" width="30px" id="eye" onclick="show();"></td><td><label id="i6" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td>
+                    </tr>
+	<tr><td rowspan="4"><label for="hb1">Selelct Your Hobbies:</label></td><td><input type="radio" id="hb1"> <label for="hb1">TALKING</label></td></tr>
+	<tr><td><input type="radio" id="hb2"> <label for="hb2">WALKING</label></td></tr>
+	<tr><td><input type="radio" id="hb3"> <label for="hb3">SLEEPING</label></td></tr>
+	<tr><td><input type="radio" id="hb4"> <label for="hb4">DRIVING</label></td></tr>
+	<tr><td><label for="insert">INSERT AN IMAGE:</label></td><td><input type="file" id="insert" required accept="png/jpg/jpeg"></td>
+                        <td><label id="i7" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></td></tr>
+	<tr><td><label for="email">E-MAIL ADDRESS:</label></td><td><input type="text" id="email" required ></td>
+                        <td><label id="i8" style="color:red ;visibility: hidden;"><b>*enter valid email address</b></label></tr>
+	<tr><td><label for="date">DATE OF BIRTH:</label></td><td><input type="date" id="dob" required ></td></tr>
+	<tr><td><label for="adress">ADDRESS:</label></td><td><textarea id="address" required></textarea></td>
+                        <td><label id="i9" style="color:red ;visibility: hidden;"><b>*invalid data</b></label></tr>
+	<tr><td><input type="checkbox" id="agree " style="float:right;" required></td><td>I AGREE TO THE TERMS AND CONDITIONS OF THE COMAPANY</td></tr>
+	<tr><td><input type="reset" id="reset"class="set" value="RESET" required ></td><td ><input type="submit" id="submit" class="set"value="SUBMIT" required ></td></tr>
+	<table>
+
+	
+  </form>
+  </div>
+  </center>
+ 
+ </body>
+</html>
